@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+
+
+<h1>{{ object.name }} タグブログ一覧</h1>
+
+<ul class="List-group">
+    {% for item in tag_list %}
+    <li class="list-group-item"><a href="{% url 'detail' item.id %}">{{ item.title }}, {{ item.created_at }}, {{ item.body|truncatechars:15 }}</a></li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

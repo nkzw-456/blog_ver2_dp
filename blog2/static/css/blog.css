@@ -1,0 +1,62 @@
+#detail-container {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  #detail h1 {
+    margin-top: 50px;
+    margin-bottom: 1em;
+    padding-bottom: 10px;
+    border-bottom: solid 1px gray;
+  
+  }
+  
+  #detail .meta {
+    margin-bottom: 100px;
+    text-align: left;
+  }
+  
+  .text {
+    padding-left: 1em;
+  }
+  
+  .text > * {
+    margin: 1em 0;
+  }
+  
+  .toc ul {
+    list-style-type: none;
+  }
+  
+  .toc::before {
+    display: block;
+    content: "目次";
+    font-weight: 700;
+    margin-bottom: 1em;
+    margin-left: -1em;
+  }
+  
+  #detail h2, #detail h3 {
+    margin-top: 100px;
+    margin-left: -1em;
+  }
+  
+  .text > p {
+    line-height: 2;
+    text-align: justify;
+    text-justify: inter-ideograph;
+  }
+  
+  #note-nav {
+    position: fixed;
+    right: 2em;
+    bottom: 2em;
+  }
+  
+  #note-nav a {
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 1px;
+  }
+
+

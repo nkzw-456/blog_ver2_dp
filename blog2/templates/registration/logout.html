@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+
+<div class="row">
+    <div class="col-md-9">
+        <h2>ログアウトしました</h2>
+        <h3>閲覧いただきありがとうございました</h3>
+        <a href="{% url 'login' %}">ログイン</a>
+        /
+        <a href="{% url 'signup' %}">新規登録</a>
+    </div>
+</div>
+
+{% endblock %}

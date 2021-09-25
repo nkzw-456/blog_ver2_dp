@@ -1,0 +1,32 @@
+{% if object_list.has_other_pages %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center mt-3">
+            {% if object_list.has_previous %}
+                <li><a class="page-link text-primary d-inline-block" href="?page={{ object_list.previous_page_number }}"><<</a></li>
+            {% else %}
+                <li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#"><<</div></li>
+            {% endif %}
+
+            {% if object_list.has_previous %}
+                {% if object_list.previous_page_number != 1 %}
+                    <li><a class="page-link text-primary d-inline-block" href="?page=1">1</a></li>
+                    <li>…</li>
+                {% endif %}
+                <li><a class="page-link text-primary d-inline-block" href="?page={{ object_list.previous_page_number }}">{{ object_list.previous_page_number }}</a></li>
+            {% endif %}
+            <li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#">{{ object_list.number }}</div></li>
+            {% if object_list.has_next %}
+                <li><a class="page-link text-primary d-inline-block" href="?page={{ object_list.next_page_number }}">{{ object_list.next_page_number }}</a></li>
+                {% if object_list.next_page_number != object_list.paginator.num_pages %}
+                    <li>…</li>
+                    <li><a class="page-link text-primary d-inline-block" href="?page={{ object_list.paginator.num_pages }}">{{ object_list.paginator.num_pages }}</a></li>
+                {% endif %}
+            {% endif %}
+            {% if object_list.has_next %}
+                <li><a class="page-link text-primary d-inline-block" href="?page={{ object_list.next_page_number }}">>></a></li>
+            {% else %}
+                <li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#">>></div></li>
+            {% endif %}
+        </ul>
+    </nav>
+  {% endif %}
